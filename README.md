@@ -140,6 +140,8 @@ export MLFLOW_TRACKING_PASSWORD="90890043c8b2ec1fac38b663c943404d0d0a2282"
 	
 # 6. Configure EC2 as self-hosted runner:
     setting>actions>runner>new self hosted runner> choose os> then run command one by one
+	
+	use 'self-hosted' runner
 
 
 # 7. Setup github secrets:
