@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wine Quality Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type=number] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Wine Quality Predictor</h2>
+
+<form action="/predict" method="post">
+    <input type="number" step="any" name="fixed_acidity" placeholder="Fixed Acidity" required>
+    <input type="number" step="any" name="volatile_acidity" placeholder="Volatile Acidity" required>
+    <input type="number" step="any" name="citric_acid" placeholder="Citric Acid" required>
+    <input type="number" step="any" name="residual_sugar" placeholder="Residual Sugar" required>
+    <input type="number" step="any" name="chlorides" placeholder="Chlorides" required>
+    <input type="number" step="any" name="free_sulfur_dioxide" placeholder="Free Sulfur Dioxide" required>
+    <input type="number" step="any" name="total_sulfur_dioxide" placeholder="Total Sulfur Dioxide" required>
+    <input type="number" step="any" name="density" placeholder="Density" required>
+    <input type="number" step="any" name="pH" placeholder="pH" required>
+    <input type="number" step="any" name="sulphates" placeholder="Sulphates" required>
+    <input type="number" step="any" name="alcohol" placeholder="Alcohol" required>
+    
+    <input type="submit" value="Predict">
+</form>
+  <h2>Prediction Result</h2>
+    <div class="result-box">
+        <h3>Predicted Wine Quality: {{ prediction }}</h3>
+    </div>
+
+</body>
+</html>
