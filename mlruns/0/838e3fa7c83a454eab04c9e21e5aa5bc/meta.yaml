@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/preetyrai/Full_Stack_ML_Project/End-to-End-Machine-Learning-Project---Drug-Quality/mlruns/0/838e3fa7c83a454eab04c9e21e5aa5bc/artifacts
+end_time: 1744714730970
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 838e3fa7c83a454eab04c9e21e5aa5bc
+run_name: mysterious-turtle-46
+run_uuid: 838e3fa7c83a454eab04c9e21e5aa5bc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744714729508
+status: 4
+tags: []
+user_id: preetyrai

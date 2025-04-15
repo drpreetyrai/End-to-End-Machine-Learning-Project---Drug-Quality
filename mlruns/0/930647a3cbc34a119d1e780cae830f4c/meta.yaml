@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/preetyrai/Full_Stack_ML_Project/End-to-End-Machine-Learning-Project---Drug-Quality/mlruns/0/930647a3cbc34a119d1e780cae830f4c/artifacts
+end_time: 1744714420026
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 930647a3cbc34a119d1e780cae830f4c
+run_name: caring-calf-816
+run_uuid: 930647a3cbc34a119d1e780cae830f4c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744714418650
+status: 4
+tags: []
+user_id: preetyrai

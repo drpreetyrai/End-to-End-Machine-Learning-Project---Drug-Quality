@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.2
 Name: mlProject
 Version: 0.0.0
 Summary: A small python package for ml app
@@ -6,6 +6,12 @@ Home-page: https://github.com/drpreetyrai/End-to-End-Machine-Learning-Project---
 Author: drpreetyrai
 Author-email: drpreetyrai@gmail.com
 Project-URL: Bug Tracker, https://github.com/drpreetyrai/End-to-End-Machine-Learning-Project---Drug-Quality/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
 
 # End-to-end-Machine-Learning-Project-with-MLflow
 

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/preetyrai/Full_Stack_ML_Project/End-to-End-Machine-Learning-Project---Drug-Quality/mlruns/0/f77d703cdcfd4731bcb102e7d02c15c7/artifacts
+end_time: 1744712542191
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f77d703cdcfd4731bcb102e7d02c15c7
+run_name: magnificent-owl-873
+run_uuid: f77d703cdcfd4731bcb102e7d02c15c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744712540796
+status: 4
+tags: []
+user_id: preetyrai
