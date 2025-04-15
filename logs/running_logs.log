@@ -1535,3 +1535,174 @@ x==========x]
  * Running on http://127.0.0.1:7070
  * Running on http://192.168.29.251:7070]
 [2025-04-15 17:45:25,070: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-15 17:48:51,534: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.29.251:8000]
+[2025-04-15 17:48:51,535: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-15 18:57:32,229: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.29.251:8000]
+[2025-04-15 18:57:32,230: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-15 18:57:34,468: INFO: _internal: 127.0.0.1 - - [15/Apr/2025 18:57:34] "GET / HTTP/1.1" 200 -]
+[2025-04-15 18:57:35,153: INFO: _internal: 127.0.0.1 - - [15/Apr/2025 18:57:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2025-04-15 18:58:11,860: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-15 18:58:11,861: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:11,862: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:11,863: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:11,863: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:11,863: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-15 18:58:11,863: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-04-15 18:58:11,867: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-15 18:58:11,867: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-04-15 18:58:11,868: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:11,868: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:11,869: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:11,869: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:11,869: INFO: common: created directory at: artifacts/data_validation]
+[2025-04-15 18:58:11,879: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-04-15 18:58:11,879: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-04-15 18:58:11,880: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:11,880: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:11,881: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:11,881: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:11,881: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-15 18:58:11,895: INFO: data_transformation: Splited data into training and test sets]
+[2025-04-15 18:58:11,895: INFO: data_transformation: (1199, 12)]
+[2025-04-15 18:58:11,895: INFO: data_transformation: (400, 12)]
+[2025-04-15 18:58:11,895: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-04-15 18:58:11,895: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-04-15 18:58:11,896: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:11,896: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:11,897: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:11,897: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:11,897: INFO: common: created directory at: artifacts/model_trainer]
+[2025-04-15 18:58:12,001: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-04-15 18:58:12,003: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-04-15 18:58:12,006: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:12,009: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:12,017: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:12,018: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:12,018: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-04-15 18:58:12,115: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2025-04-15 18:58:13,896: ERROR: main: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "main.py", line 64, in <module>
+    data_ingestion.main()
+  File "/Users/preetyrai/Full_Stack_ML_Project/End-to-End-Machine-Learning-Project---Drug-Quality/src/mlProject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/preetyrai/Full_Stack_ML_Project/End-to-End-Machine-Learning-Project---Drug-Quality/src/mlProject/components/model_evaluation.py", line 66, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/sklearn/__init__.py", line 424, in log_model
+    return Model.log(
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/models/model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/tracking/fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/tracking/client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/tracking/_tracking_service/client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/setuptools/_distutils/dir_util.py", line 155, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/setuptools/_distutils/dir_util.py", line 197, in _copy_one
+    file_util.copy_file(
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/setuptools/_distutils/file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-04-15 18:58:14,059: INFO: _internal: 127.0.0.1 - - [15/Apr/2025 18:58:14] "GET /train HTTP/1.1" 200 -]
+[2025-04-15 18:58:14,866: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-04-15 18:58:14,867: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:14,868: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:14,868: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:14,869: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:14,869: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-04-15 18:58:14,869: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-04-15 18:58:14,872: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-04-15 18:58:14,872: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-04-15 18:58:14,873: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:14,873: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:14,874: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:14,874: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:14,874: INFO: common: created directory at: artifacts/data_validation]
+[2025-04-15 18:58:14,877: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-04-15 18:58:14,877: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-04-15 18:58:14,878: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:14,879: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:14,879: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:14,880: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:14,880: INFO: common: created directory at: artifacts/data_transformation]
+[2025-04-15 18:58:14,887: INFO: data_transformation: Splited data into training and test sets]
+[2025-04-15 18:58:14,887: INFO: data_transformation: (1199, 12)]
+[2025-04-15 18:58:14,887: INFO: data_transformation: (400, 12)]
+[2025-04-15 18:58:14,887: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-04-15 18:58:14,887: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-04-15 18:58:14,888: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:14,889: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:14,889: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:14,890: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:14,890: INFO: common: created directory at: artifacts/model_trainer]
+[2025-04-15 18:58:14,900: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-04-15 18:58:14,900: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-04-15 18:58:14,901: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-04-15 18:58:14,901: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-04-15 18:58:14,902: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-04-15 18:58:14,902: INFO: common: created directory at: artifacts]
+[2025-04-15 18:58:14,902: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-04-15 18:58:14,973: INFO: common: json file saved at: artifacts/model_evaluation/metrics.json]
+[2025-04-15 18:58:16,381: ERROR: main: No module named 'distutils._modified']
+Traceback (most recent call last):
+  File "main.py", line 64, in <module>
+    data_ingestion.main()
+  File "/Users/preetyrai/Full_Stack_ML_Project/End-to-End-Machine-Learning-Project---Drug-Quality/src/mlProject/pipeline/stage_05_model_evaluation.py", line 15, in main
+    model_evaluation_config.log_into_mlflow()
+  File "/Users/preetyrai/Full_Stack_ML_Project/End-to-End-Machine-Learning-Project---Drug-Quality/src/mlProject/components/model_evaluation.py", line 66, in log_into_mlflow
+    mlflow.sklearn.log_model(model, "model")
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/sklearn/__init__.py", line 424, in log_model
+    return Model.log(
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/models/model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/tracking/fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/tracking/client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/tracking/_tracking_service/client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/setuptools/_distutils/dir_util.py", line 155, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/setuptools/_distutils/dir_util.py", line 197, in _copy_one
+    file_util.copy_file(
+  File "/opt/anaconda3/envs/mlenv/lib/python3.8/site-packages/setuptools/_distutils/file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'
+[2025-04-15 18:58:16,527: INFO: _internal: 127.0.0.1 - - [15/Apr/2025 18:58:16] "GET /train HTTP/1.1" 200 -]
+[2025-04-15 19:00:11,613: INFO: _internal: 127.0.0.1 - - [15/Apr/2025 19:00:11] "GET / HTTP/1.1" 200 -]
+[2025-04-15 19:00:42,306: INFO: _internal: 127.0.0.1 - - [15/Apr/2025 19:00:42] "POST /predict HTTP/1.1" 200 -]
+[2025-04-15 19:00:45,596: INFO: _internal: 127.0.0.1 - - [15/Apr/2025 19:00:45] "GET / HTTP/1.1" 200 -]
+[2025-04-15 19:03:30,488: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.29.251:8000]
+[2025-04-15 19:03:30,489: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-04-15 19:03:46,482: INFO: _internal: 127.0.0.1 - - [15/Apr/2025 19:03:46] "POST /predict HTTP/1.1" 200 -]
