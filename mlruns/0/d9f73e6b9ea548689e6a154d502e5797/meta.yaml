@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/preetyrai/Full_Stack_ML_Project/End-to-End-Machine-Learning-Project---Drug-Quality/mlruns/0/d9f73e6b9ea548689e6a154d502e5797/artifacts
+end_time: 1744715011368
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d9f73e6b9ea548689e6a154d502e5797
+run_name: resilient-mare-738
+run_uuid: d9f73e6b9ea548689e6a154d502e5797
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744715009986
+status: 4
+tags: []
+user_id: preetyrai
